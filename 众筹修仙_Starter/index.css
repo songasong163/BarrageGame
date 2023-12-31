@@ -1,0 +1,345 @@
+body {
+    background-color: black;
+  }
+
+  body,
+  html {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+/* 信仰元素 */
+  .star {
+    width: 10px;
+    height: 10px;
+    background-color: #fff;
+    border-radius: 50%;
+    position: absolute;
+    animation: star 1.5s infinite;
+  }
+  /* 修炼背景 */
+  #bgpicture{
+    background: url("img/workbg1.png") no-repeat center center fixed;
+    background-size: cover;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 500px;
+    height: 95vh;
+    /* z-index: 1; */
+  }
+  /* 修炼法轮 */
+  #headbg{
+    background: url("img/headbg1.png") no-repeat center center fixed;
+    background-size: cover;
+    position: absolute;
+    top: 15%;
+    left: 41.5%;
+    transform: translate(-50%, -50%);
+    width: 250px;
+    height: 250px;
+    border-radius: 125px;
+    animation: rotateAnimation 4s linear infinite;
+  }
+  /* 旋转 */
+  @keyframes rotateAnimation {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+/* 修炼人物 */
+  #person{
+    background: url("img/person1.png") no-repeat center center fixed;
+    background-size: cover;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 250px;
+    height: 400px;
+    animation: floatAnimation 3s ease-in-out infinite; 
+    /* filter: hue-rotate(180deg); */
+  }
+/* 上下浮动 */
+  @keyframes floatAnimation {
+    0% {
+      top: 50%;
+    }
+    50% {
+      top: 49%;
+    }
+    100% {
+      top: 50%;
+    }
+  }
+
+
+
+  /* 修炼经验 */
+  .exp-effect {
+    position: fixed;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 32px;
+    color: red;
+    opacity: 0;
+    animation: expAnimation 1.5s ease-out forwards;
+  }
+  
+  @keyframes expAnimation {
+    0% { opacity: 0; transform: translate(-50%, -50%) scale(1); }
+    50% { opacity: 1; }
+    100% { opacity: 0; transform: translate(-50%, -50%) scale(2); }
+  }
+
+  
+
+  /* 任务简介 */
+  #title{
+    background: url("img/title1.png") no-repeat center center fixed;
+    background-size: contain;
+    position: absolute;
+    top: 8%;
+    left: 35%;
+    transform: translate(-50%, -50%);
+    width: 320px;
+    height: 80px;
+    /* animation: floatAnimation 3s ease-in-out infinite;  */
+  }
+
+  /* 头像 */
+  #headimg{
+    background: url("img/headimg.png") no-repeat center center fixed;
+    background-size: contain;
+    position: absolute;
+    top: 7.4%;
+    left: 27.8%;
+    transform: translate(-50%, -50%);
+    width: 60px;
+    height: 60px;
+    animation: blink-animation 1s infinite;
+  }
+
+  /* 闪烁 */
+  @keyframes blink-animation {
+    0% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.5;
+    }
+    100% {
+      opacity: 1;
+    }
+
+  }
+  #classify,#identity,#level{
+    /* position: absolute;  */
+    color:#f3b117;
+    font-family: "楷体", "KaiTi", Arial, sans-serif;
+    font-weight: 600;
+  }
+  #classify{
+    color:#f36f17;
+  }
+  #level{
+    color:#38f317;
+  }
+  #title p{
+     margin:5px 0 0 0;
+    padding:0;
+    position:relative;
+    left:40%;
+  }
+
+/* 属性 */
+  #propety{
+    position: absolute;
+    top: 6%;
+    left: 65%;
+    transform: translate(-50%, -50%);
+    width: 180px;
+    height: 80px;
+  }
+  #flowRate,#mind,#hardTime,.unit{
+    color:#ee8a08;
+    font-family: "华文行楷", "HuaWenXingKai", Arial, sans-serif;
+    font-weight: 600;
+    text-shadow:
+    -1px -1px 0 rgb(35, 35, 35),
+    1px -1px 0 rgb(35, 35, 35),
+    -1px 1px 0 rgb(35, 35, 35),
+    1px 1px 0 rgb(35, 35, 35);
+  }
+  #propety p{
+    background: url("./img/protetybg.png") no-repeat center center fixed;
+    background-size: cover;
+    padding-left:15px;
+  }
+  .propetyVal{
+    padding-left:10px;
+    color:#fff;
+  }
+  .unit{
+    float: right;
+    padding-right: 5px;
+    line-height: 25px; 
+   vertical-align: middle;
+  }
+  
+
+  /* 技能类 */
+ 
+  #sneakAttack{
+    background: url("img/sneakAttack.png") no-repeat center center fixed;
+    background-size: contain;
+    position: absolute;
+    top: 25%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+    width: 60px;
+    height: 60px;
+  }
+  #improve{
+    background: url("img/improve.png") no-repeat center center fixed;
+    background-size: contain;
+    position: absolute;
+    top: 25%;
+    left: 70%;
+    transform: translate(-50%, -50%);
+    width: 60px;
+    height: 60px;
+  }
+  
+
+
+  /* 任务面板 */
+  #leftTask,#rightTask{
+    background: url("img/recharge_bg.png") no-repeat center center fixed;
+    background-size: contain;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    width: 450px;
+    height: 300px;
+    padding-left:7%;
+    padding-top:10%;
+  }
+  #leftTask{
+    top: 75%;
+    left: 16%;
+    
+  }
+  #rightTask{
+    top: 75%;
+    left:85%
+  }
+  #leftTitle{
+    background: url("img/taskTitle.png") no-repeat center center fixed;
+    background-size: contain;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    width: 100px;
+    height: 27px;
+    line-height: 27px;
+    top: 30%;
+    left: 48%;
+    text-align: center;
+    font-family: "华文行楷", "HuaWenXingKai", Arial, sans-serif;
+  }
+  #rightTitle{
+    background: url("img/taskTitle.png") no-repeat center center fixed;
+    background-size: contain;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    width: 100px;
+    height: 27px;
+    line-height: 27px;
+    top: 30%;
+    left: 48%;
+    text-align: center;
+    font-family: "华文行楷", "HuaWenXingKai", Arial, sans-serif;
+  }
+  
+
+  /* 修炼信息 */
+  #infomation{
+    background: url("img/infomation.png") no-repeat center center fixed;
+    background-size: contain;
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    height: 80px;
+    padding:10px 0 0 90px;
+  }
+  #infomation p{
+    position:absolute;
+    color:#fff;
+    
+  }
+  #infoTitle{
+    color:#fff;
+    font-family: "华文行楷", "HuaWenXingKai", Arial, sans-serif;
+    font-weight: 600;
+    margin-right:30px;
+  } 
+
+  
+  #reception p{
+    color:#ff0606;
+    font-family: "华文行楷", "HuaWenXingKai", Arial, sans-serif;
+    font-weight: 600;
+    font-size: 100px;
+  }
+
+
+  /* 偷袭伤害效果 */
+  
+  #lefthurt{
+    background-size: 0 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    height: 400px;
+    opacity:0;
+    
+  }
+  #lefthurt{
+    background: url("img/lefthurt.png") no-repeat center center fixed;
+    
+  }
+
+
+  /* 进阶提示 */
+  #advance{
+    background: url("img/message.png") no-repeat center center fixed;
+    background-size: contain;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    height: 100px;
+    text-align: center;
+    line-height: 90px;
+    color:#ee0808;
+    font-family: "华文行楷", "HuaWenXingKai", Arial, sans-serif;
+    font-weight: 600;
+    font-size:22px;
+    opacity: 0;
+    transition: opacity 4s;
+
+  }
+
+  #container{
+    position: relative;
+   
+  }

@@ -1,0 +1,80 @@
+body{
+    background-color: #e1e5ea;
+}
+
+.container{
+    padding-left:5%;
+}
+#subjectItem{
+    font-family: "等线",'DengXian';
+    font-weight: 600;
+    font-size: 25px;
+    line-height: 1.5;
+}
+input[type="checkbox"]:checked {
+    /* 设置选中状态下的颜色 */
+    color: green;
+    font-weight: bold;
+    /* 设置选中状态下的背景 */
+    /* background-color: #00f; */
+}
+.answerItem{
+    width: 200px;
+    height: 100px;
+    display: inline-block;
+    background-size: cover;
+    margin-right: 80px;
+    border-radius: 10px;
+    flex-grow: 1;
+    padding-top:10px;
+    padding-left: 30px;
+}
+#answerItemA{
+    background-image: url("./img/bg1.png");
+}
+#answerItemB{
+    background-image: url("./img/bg2.png");
+}
+#answerItemC{
+    background-image: url("./img/bg3.png");
+}
+#answerItemD{
+    background-image: url("./img/bg4.png");
+}
+.answerItem span{
+    font-size: 44px;
+    font-weight: 800;
+    line-height: 100px;
+}
+#statistics{
+    padding-top:4%;
+    display: flex; /* 使用 flexbox 布局 */
+    justify-content: space-between;
+}
+#Aanswer,#Banswer,#Canswer,#Danswer{
+    /* float:right; */
+    margin-left:40%;
+    color:#fff;
+}
+#subject p{
+    display:inline-block
+}
+#headTime{
+    display: flex; /* 使用 flexbox 布局 */
+    float:right;
+    align-items: center; /* 将子元素在交叉轴上垂直居中 */
+    padding-right: 200px;
+}
+#headTime img{
+    width: 40px; /* 设置 img 的宽度 */
+    height: 40px; /* 设置 img 的高度 */
+    object-fit: cover;
+}
+#flow{
+    margin-right: 300px;
+    color:red;
+}
+#answer label{
+    font-size:18px;
+}
+#countDown{color:red;}

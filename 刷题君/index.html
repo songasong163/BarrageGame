@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>刷题君</title>
+    <script src="https://unpkg.com/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="./decode.js"></script>
+    <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+    <input type="file" id="fileInput">
+    <div class="container">
+      <div id = "subject">
+        <div id = "headTime">
+          <em id="flow">流程：答题(40s)---->公布正确答案(10s)---->下一题</em>
+          <span id="itemClass">答题</span><span>倒计时：</span>
+          <img id="startbtn" src="./img/5.png" alt="">
+          <span id="countDown"></span>
+          <span> 秒</span>
+        </div>
+        <textarea name="" id="subjectItem" cols="100" rows="10">
+无论官员公布的是不是真相，都要怀疑：无论政府准出的是不是善政，都要怀疑。这种怀疑固说明了一些人对相关官员的成见，但也说明曾经有不少官员太爱作秀、太喜欢说假话、太善于演戏，以致今天你说了实话，人们还是不相信，这就是说假话的代价。要修复公众对公权力的信任，不能单纯依赖于公众的改变，更需要权力的自我修复，比如绝不可再造假，不可再愚弄民众。
+这段文字意在强调()。
+        </textarea>
+      </div>
+      <div id = "answer">
+        <input type="checkbox" class="option" id="option1" name="A" value="option1">
+        <span>A.</span>
+        <label for="option1" id = "AItem">选项 1</label>
+        <br>
+        <input type="checkbox" class="option" id="option2" name="B" value="option2">
+        <span>B.</span>
+        <label for="option2" id = "BItem">选项 2</label>
+        <br>
+        <input type="checkbox" class="option" id="option3" name="C" value="option3">
+        <span>C.</span>
+        <label for="option3" id = "CItem">选项 3</label>
+        <br>
+        <input type="checkbox" class="option" id="option3" name="D" value="option3">
+        <span>D.</span>
+        <label for="option3" id = "DItem">选项 4</label>
+      </div>
+      <div id = "statistics">
+        <div class="answerItem" id="answerItemA"><span>A</span><span id="Aanswer">0</span>人</div>
+        <div class="answerItem" id="answerItemB"><span>B</span><span id="Banswer">0</span>人</div>
+        <div class="answerItem" id="answerItemC"><span>C</span><span id="Canswer">0</span>人</div>
+        <div class="answerItem" id="answerItemD"><span>D</span><span id="Danswer">0</span>人</div>
+      </div>
+    </div>
+</body>
+<script src="./index.js"></script>
+<script src="./barrage.js"></script>
+</html>
